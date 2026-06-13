@@ -2,7 +2,7 @@ import mrCrabs from "./mr-crabs.png";
 
 const content = document.querySelector("#content");
 
-function Home() {
+function home() {
 	content.innerHTML = "";
 
 	const image = document.createElement("img");
@@ -16,4 +16,4 @@ function Home() {
 	content.append(speech);
 }
 
-export default Home;
+export default home;
