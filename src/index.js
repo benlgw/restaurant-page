@@ -7,6 +7,8 @@ import about from "./about.js";
 const buttons = document.querySelectorAll("header button");
 const content = document.querySelector("#content");
 
+home();
+
 buttons.forEach((button) => {
 	button.addEventListener("click", () => {
 		buttons.forEach((button) => {
@@ -18,10 +20,19 @@ buttons.forEach((button) => {
 
 		switch (tab) {
 			case "Home":
+				content.classList.remove("menu", "about");
+				content.classList.add("home");
+				home();
 				break;
 			case "Menu":
+				content.classList.remove("home", "about");
+				content.classList.add("menu");
+				menu();
 				break;
 			case "About":
+				content.classList.remove("home", "menu");
+				content.classList.add("about");
+				about();
 				break;
 		}
 	});
