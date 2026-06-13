@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "Krabby Patty";
+	src:
+		url("./fonts/KrabbyPatty.woff2") format("woff2"),
+		url("./fonts/KrabbyPatty.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--krusty-text: #740b1a;
+}
+
+body {
+	margin: 0;
+
+	background: url("./krusty-crab.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100vh;
+
+	font-size: 16px;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: "Krabby Patty";
+	font-size: 4rem;
+
+	padding: 15px;
+
+	letter-spacing: 10px;
+}
+
+header h1 {
+	color: var(--krusty-text);
+	text-shadow: 1px 5px 5px white;
+
+	margin: 0;
+}
+
+header button {
+	font-family: inherit;
+	font-size: 2.5rem;
+	color: var(--krusty-text);
+	text-shadow: 1px 5px 5px white;
+
+	background: none;
+	border: none;
+}
+
+.grid {
+	/* border: 1px solid black; */
+
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+
+	height: 70vh;
+
+	overflow-y: auto;
+}
+
+.content {
+	grid-column: 2 / 3;
+
+	font-family: "Krabby Patty";
+	line-height: 1.5;
+	letter-spacing: 2px;
+
+	color: var(--krusty-text);
+	text-shadow: 1px 1px 1px white;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+}
